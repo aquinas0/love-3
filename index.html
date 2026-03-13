@@ -1,0 +1,179 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Você ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#1b0025,#000);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+h1{
+margin-top:40px;
+font-size:42px;
+color:#ff5fa2;
+text-shadow:0 0 15px #ff5fa2;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border-radius:15px;
+padding:25px;
+margin:25px 0;
+font-size:20px;
+line-height:1.6;
+box-shadow:0 0 20px rgba(255,105,180,0.3);
+backdrop-filter:blur(6px);
+}
+
+.gallery{
+margin-top:40px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.gallery img{
+width:250px;
+border-radius:15px;
+box-shadow:0 0 20px #ff5fa2;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+button{
+margin-top:40px;
+padding:12px 30px;
+font-size:18px;
+border:none;
+border-radius:12px;
+background:#ff5fa2;
+color:white;
+cursor:pointer;
+box-shadow:0 0 10px #ff5fa2;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+color:#ff5fa2;
+font-size:22px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+to{
+transform:translateY(110vh);
+}
+
+}
+
+@media (max-width:700px){
+
+h1{font-size:32px;}
+
+.card{font-size:18px;}
+
+.gallery img{width:90%;}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Para Você ❤️</h1>
+
+<div class="container">
+
+<div class="card">
+Feliz aniversário, princesa! Hoje eu lembrei de você com aquele carinho de sempre, e mesmo com tudo que aconteceu, ainda guardo muito afeto por você e por tudo que vivemos.
+</div>
+
+<div class="card">
+Você foi uma das pessoas mais especiais que já passaram pela minha vida, e certas lembranças continuam aqui comigo, simples e bonitas, do jeito que foram.
+</div>
+
+<div class="card">
+Só queria que você soubesse que continuo desejando o seu bem, de coração, e que Deus cuide de você e ilumine sempre o seu caminho.
+</div>
+
+<div class="gallery">
+
+<img src="foto1.jpeg">
+<img src="foto2.jpeg">
+<img src="foto3.jpeg">
+
+</div>
+
+<button onclick="playMusic()">Tocar música 🎵</button>
+
+</div>
+
+<audio id="music" loop>
+<source src="love1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function playMusic(){
+
+document.getElementById("music").play();
+
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💗";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},8000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+
+</html>
+```
