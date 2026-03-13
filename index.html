@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Você ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#ff9acb,#ff6fae);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+h1{
+margin-top:50px;
+font-size:40px;
+}
+
+.text{
+max-width:700px;
+margin:40px auto;
+font-size:22px;
+line-height:1.6;
+padding:0 20px;
+}
+
+.photo{
+margin:50px auto;
+width:300px;
+}
+
+.photo img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 25px rgba(255,255,255,0.6);
+}
+
+.heart{
+position:fixed;
+top:-20px;
+color:#ff2e88;
+font-size:25px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+to{
+transform:translateY(110vh);
+}
+
+}
+
+button{
+margin-top:40px;
+padding:14px 30px;
+font-size:18px;
+border:none;
+border-radius:12px;
+background:white;
+color:#ff2e88;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Para Você ❤️</h1>
+
+<div class="text">
+
+<p>
+Feliz aniversário, princesa! Hoje eu lembrei de você com aquele carinho de sempre, e mesmo com tudo que aconteceu, ainda guardo muito afeto por você e por tudo que vivemos.
+</p>
+
+</div>
+
+<div class="photo">
+<img src="foto1.jpeg">
+</div>
+
+<div class="text">
+
+<p>
+Você foi uma das pessoas mais especiais que já passaram pela minha vida, e certas lembranças continuam aqui comigo, simples e bonitas, do jeito que foram.
+</p>
+
+</div>
+
+<div class="photo">
+<img src="foto2.jpeg">
+</div>
+
+<div class="text">
+
+<p>
+Só queria que você soubesse que continuo desejando o seu bem, de coração, e que Deus cuide de você e ilumine sempre o seu caminho.
+</p>
+
+</div>
+
+<div class="photo">
+<img src="foto3.jpeg">
+</div>
+
+<button onclick="playMusic()">Tocar música 🎵</button>
+
+<audio id="music" loop>
+<source src="love1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function playMusic(){
+
+document.getElementById("music").play();
+
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💗";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(3+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},7000);
+
+}
+
+setInterval(createHeart,200);
+
+</script>
+
+</body>
+
+</html>
+
